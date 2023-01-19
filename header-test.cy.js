@@ -17,7 +17,7 @@ describe('test header', () => {
       .should('have.attr','href','https://www.lemustache.net/projects')
       .and('contain','Projects')
       .click()
-      .url('https://www.lemustache.net/projects')
+      .url().should('equal','https://lemustache.net/projects')
   })
 
   it('checks Topbar left', () => {

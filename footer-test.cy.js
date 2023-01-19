@@ -12,7 +12,7 @@ describe('test footer', () => {
           .contains('Terms')
           .should('have.attr','href','https://www.lemustache.net/terms')
           .click()
-          .url('https://www.lemustache.net/terms')
+          .url().should('equal','https://lemustache.net/terms')
 
         })
         
@@ -23,7 +23,7 @@ describe('test footer', () => {
           .contains('Privacy')
           .should('have.attr','href','https://www.lemustache.net/privacy')
           .click()
-          .url('https://www.lemustache.net/privacy')
+          .url().should('equal','https://lemustache.net/privacy')
 
         })
 
