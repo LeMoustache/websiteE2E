@@ -13,6 +13,14 @@ describe('test header', () => {
       .and('contain','Contact')
       .click()
 
+    cy.get('#blogLink').children()
+      .should('have.attr','href','https://www.lemustache.net/blog')
+      .and('contain','Blog')
+      .click()
+      .url().should('equal','https://lemustache.net/blog')
+
+      cy.visit('https://LeMustache.net')
+
     cy.get('#projectLink').children()
       .should('have.attr','href','https://www.lemustache.net/projects')
       .and('contain','Projects')
