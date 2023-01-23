@@ -4,6 +4,10 @@ describe('test footer', () => {
 
         cy.visit('https://lemustache.net/blog')
 
+        cy.get('.topFrame').children()
+        .should('contain','BLOG')
+        .and('contain','A place where I write about random stuff.')
+
          cy.get('.blogHolder').as('blogHolder')
 
          cy.get('@blogHolder')
